@@ -2,14 +2,18 @@
 
 const express = require("express");
 const bodyParser = require("body-parser");
-const { fchown } = require("fs");
 
 const app = express();
 
 app.get("/", function(req, res) {
     
-    var a = 5 + 3;
-    res.send(a);
+    var today = new Date();
+
+    if(today.getDate === 6 || today.getDate === 0) {
+        res.send("Yayyy! Its the weekend!");
+    } else {
+        res.send("Booo! Its a weekday.");
+    }
 });
 
 
