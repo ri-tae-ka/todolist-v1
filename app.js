@@ -11,9 +11,9 @@ app.get("/", function(req, res) {
     var currentDay = today.getDay();
 
     if (currentDay === 6 || currentDay === 0) {
-        res.send("Yayyy! Its the weekend!");
+        res.send("<h1>Yayyy! Its the weekend!</h1>");
     } else {
-        res.send("Booo! Its a weekday.");
+        res.send("<h1>Booo! Its a weekday.</h1>");
     }
 
 });
