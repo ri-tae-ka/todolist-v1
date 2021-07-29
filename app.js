@@ -13,7 +13,9 @@ app.get("/", function(req, res) {
     if (currentDay === 6 || currentDay === 0) {
         res.send("<h1>Yayyy! Its the weekend!</h1>");
     } else {
-        res.send("<h1>Booo! Its a weekday.</h1>");
+        res.write("<p>Work day!</p>");
+        res.write("<h1>Booo! Its not a weekday.</h1>");
+        res.send();
     }
 
 });
