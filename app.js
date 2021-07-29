@@ -9,11 +9,12 @@ app.get("/", function(req, res) {
     
     var today = new Date();
 
-    if(today.getDate === 6 || today.getDate === 0) {
+    if(today.getDay === 6 || today.getDay === 0) {
         res.send("Yayyy! Its the weekend!");
     } else {
         res.send("Booo! Its a weekday.");
     }
+
 });
 
 
